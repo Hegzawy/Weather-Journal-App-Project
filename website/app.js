@@ -68,18 +68,16 @@ async function getWebAPIData(zipCode) {
 //this function is from udacity classroom
 
 async function postDataToServer (url, data) {
-  const response = await fetch (url, {
-    method: 'POST',
-    credentials: 'same-origin',
-    headers: {
-        'Content-Type': 'application/json',
-    },       
-    body: JSON.stringify(data), 
-  });
-  getProjectData();
   try {
-    const newData = await response.json();  
-    return newData;
+    const response = await fetch (url, {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: {
+          'Content-Type': 'application/json',
+      },       
+      body: JSON.stringify(data), 
+    });
+    getProjectData();
   }catch(error) {
   console.log("error", error);
   }

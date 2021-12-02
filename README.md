@@ -1,10 +1,15 @@
 # Weather-Journal App Project
 
-## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
+## Table of Contents
+* [Weather Journal App Project](#project-title)
+* [Table of Contents](#table-of-contents)
+* [Purpose](#purpose)
+* [Project Sponsor](#project-sponsor)
 
-## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
+## Purpose 
 
-## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+This Project is a weather journal app that fetches the weather data from external api and fetches the user data like the city zip code and some information about the user then projects the data gathered to the user using Node & Express and async JS.
+
+## Project Sponsor 
+
+The NanoDegree is sponsored by MCIT and EgyptFWD and managed by Udacity.

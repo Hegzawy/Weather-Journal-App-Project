@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Zen Kurenaido', sans-serif;
+
+}
+
+body {
+    background-color: blanchedalmond;
+}
+
+/*main container layout */
+#app {
+    max-width: 67.5rem;
+    display: grid;
+    grid-template-areas:
+    'one one one'
+    'two two four'
+    'three three four'
+    ;
+    margin: auto;
+    max-height: 100vh;
+    grid-row-gap: 1rem;
+}
+
+/*headers sizes */
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* grid areas layout */
+.holder-headline {
+    grid-area: one;
+}
+.holder-zip {
+    grid-area: two;
+}
+.holder-feel {
+    grid-area: three;
+}
+.holder-entry {
+    grid-area: four;
+}
+
+
+.holder-zip, .holder-feel {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items:center ;
+}
+.holder-zip label {
+    display: block;
+    font-size: 2rem;
+    color: rgb(21, 108, 223);
+    margin-bottom: 1rem;
+}
+.holder-zip input {
+    display: inline-block;
+    height: 3rem;
+    text-align: center;
+    transition: 100ms;
+/*     margin-bottom: 3rem; */
+    max-width: 14rem;
+}
+.holder-zip input:focus {
+    background-color: rgb(149, 196, 223);
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+}
+
+#error {
+    background-color: rgb(190, 33, 33);
+    color: aqua;
+    width: 9rem;
+    height:2.7rem;
+    z-index: -99;
+    transform: translateY(-2.8rem);
+    margin-top: zero;
+    border-radius: 0 0 20px 20px;
+    transition: 500ms;
+}
+
+#error.happens {
+    transform: translateY(0);
+}
+
+.holder-feel label {
+    display: block;
+    font-size: 2rem;
+}
+
+.myInput {
+    display: block;
+    align-self: center;
+    width: 80%;
+    height: 14rem;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(0, 162, 255, 0.336);
+    font-size: 1.5rem;
+    resize: none;
+}
+.holder-entry {
+    background-color: beige;
+    margin-right: 1rem;
+}
+.entryData p{
+    font-size: 1.5rem;
+    padding-left: 10px;
+    background-color: beige;
+}
+
+#generate {
+    margin-top: 1rem;
+    height: 4rem;
+    width: 12rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(21, 108, 223) ;
+}
+#generate:hover {
+    font-weight: 900;
+    cursor:pointer;
+}
+
+/* media queries */
+@media screen and (max-width: 37.5rem) {
+    #app {
+        display: grid;
+        grid-template-areas:
+        'one one one'
+        'two two two'
+        'three three three'
+        'four four four';
+    }
+    
+}
